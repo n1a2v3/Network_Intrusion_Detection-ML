@@ -1,0 +1,102 @@
+{
+  "feature_columns": [
+    "duration",
+    "protocol_type",
+    "service",
+    "flag",
+    "src_bytes",
+    "dst_bytes",
+    "land",
+    "wrong_fragment",
+    "urgent",
+    "hot",
+    "num_failed_logins",
+    "logged_in",
+    "num_compromised",
+    "root_shell",
+    "su_attempted",
+    "num_root",
+    "num_file_creations",
+    "num_shells",
+    "num_access_files",
+    "num_outbound_cmds",
+    "is_host_login",
+    "is_guest_login",
+    "count",
+    "srv_count",
+    "serror_rate",
+    "srv_serror_rate",
+    "rerror_rate",
+    "srv_rerror_rate",
+    "same_srv_rate",
+    "diff_srv_rate",
+    "srv_diff_host_rate",
+    "dst_host_count",
+    "dst_host_srv_count",
+    "dst_host_same_srv_rate",
+    "dst_host_diff_srv_rate",
+    "dst_host_same_src_port_rate",
+    "dst_host_srv_diff_host_rate",
+    "dst_host_serror_rate",
+    "dst_host_srv_serror_rate",
+    "dst_host_rerror_rate",
+    "dst_host_srv_rerror_rate"
+  ],
+  "models": [
+    "Linear Regression",
+    "Random Forest",
+    "Neural Network"
+  ],
+  "results": {
+    "Linear Regression": {
+      "accuracy": 0.7592,
+      "precision": 0.952,
+      "recall": 0.6077,
+      "f1_score": 0.7418,
+      "confusion_matrix": [
+        [
+          9318,
+          393
+        ],
+        [
+          5035,
+          7798
+        ]
+      ]
+    },
+    "Random Forest": {
+      "accuracy": 0.7717,
+      "precision": 0.9667,
+      "recall": 0.6204,
+      "f1_score": 0.7557,
+      "confusion_matrix": [
+        [
+          9437,
+          274
+        ],
+        [
+          4872,
+          7961
+        ]
+      ]
+    },
+    "Neural Network": {
+      "accuracy": 0.779,
+      "precision": 0.9703,
+      "recall": 0.631,
+      "f1_score": 0.7647,
+      "confusion_matrix": [
+        [
+          9463,
+          248
+        ],
+        [
+          4735,
+          8098
+        ]
+      ]
+    }
+  },
+  "target_definition": "0 = Normal, 1 = Attack/Anomalous",
+  "linear_regression_threshold": 0.5
+}
